@@ -12,6 +12,7 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.8.3",
     "react-syntax-highlighter": "^15.6.1",
+    "robot-js": "^1.0.2",
     "sass": "^1.80.6",
     "vega": "^5.30.0",
     "vega-embed": "^6.29.0",
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"npm start\" \"node server.js\""
   },
   "eslintConfig": {
     "extends": [

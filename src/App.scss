@@ -150,7 +150,48 @@ body {
     display: flex;
     flex: 1;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    gap: 16px;
+    padding: 16px;
+    position: relative;
+    z-index: 1;
+
+    .zoho-frame {
+      flex: 1;
+      height: 100%;
+      border: none;
+      border-radius: 8px;
+      min-width: 50%;
+      pointer-events: auto;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    .stream {
+      flex: 1;
+      height: 100%;
+      max-width: 50%;
+      border-radius: 8px;
+      object-fit: contain;
+      
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  // Ensure ControlTray stays on top
+  .control-tray {
+    position: relative;
+    z-index: 2;
   }
 
   .function-call {
